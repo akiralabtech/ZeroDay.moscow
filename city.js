@@ -15927,7 +15927,7 @@
         }
         new class {
             constructor() {
-                console.log("design: https://loonatiks.gr/"), console.log("development: https://yannickgregoire.nl/"), this.initPreloader(), this.initScroll(), this.initCity(), this.initIntro(), this.initConsent(), this.initGoogleTranslate()
+                console.log("mail: akirahack@tuta.io"), console.log("development: akira"), this.initPreloader(), this.initScroll(), this.initCity(), this.initIntro(), this.initConsent(), this.initGoogleTranslate()
             }
             initPreloader() {
                 this.preloaderElement = document.querySelector("[data-preloader]"), To.init(this.preloaderElement)
