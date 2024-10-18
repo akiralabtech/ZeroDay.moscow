@@ -136,6 +136,7 @@ body {
         display: none;
     }
 }
+
 .my-p:hover {
     background-color: #fa4c14;
     color: black;
@@ -149,7 +150,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 82vh;
+    height: 85vh;
 }
 .section--intro .city {
     position: absolute;
