@@ -44,6 +44,17 @@
 .spinning {
     animation: spinning steps(8, end) 2s infinite;
 }
+/* Standard keyframes definition */
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Vendor-prefixed keyframes for WebKit browsers */
 @-webkit-keyframes spinning {
     0% {
         transform: rotate(0deg);
@@ -52,6 +63,18 @@
         transform: rotate(360deg);
     }
 }
+
+/* Vendor-prefixed keyframes for Mozilla browsers */
+@-moz-keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* You can also include other vendor prefixes as needed */
 ::selection {
     background-color: #fa4c14;
     color: #010101;
