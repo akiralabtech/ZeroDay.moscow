@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <title>AKIRA'S_RESUME</title>
-    <link rel="icon" type="image/png" sizes="512x512"  href="img/icon_512.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/icon_192.png">
-    <link rel="icon" type="image/png" sizes="32x32"    href="img/icon_32.png">
+    <title>TM</title>
+    <link rel="icon" type="image/png" sizes="192x192"  href="IMG/icon_192.png">
+    <link rel="icon" type="image/png" sizes="32x32"    href="IMG/icon_32.png">
     <link rel="stylesheet" type="text/css"             href="main.css"/>
     <script async="" src="city.js"></script>
-    <script src="main.js"></script>
-
     <script>  
         setInterval(function () {
           var now = new Date();
@@ -25,7 +22,23 @@
         }, 1000);
     </script>
 </head>
+<div id="loading-screen">
+  <video id="loading-video" autoplay muted playsinline>
+    <source src="IMG/oswald_gif.mp4" type="video/mp4">
+  </video>
+</div>
 
+<script>
+const loadingScreen = document.getElementById('loading-screen');
+const loadingVideo = document.getElementById('loading-video');
+
+loadingVideo.addEventListener('ended', () => {
+loadingScreen.classList.add('fade-out');
+setTimeout(() => {
+  loadingScreen.style.display = 'none';
+}, 1000);
+});
+</script>
 <pre id="PROLOGUE" class="headerPreMax"></pre>
 <pre class="headerPreMin" style="text-align: center;"> 
  _____ _____ _____ _____ _____ 
@@ -234,11 +247,90 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.
 ---------------------------------------------------------------------------------------------------------------------------------------<br>
 [X] TOOLS<br>
 <p style="margin: 0 auto; text-align: center; border: 1px solid antiquewhite; width: 50%; padding: 5px;">Just tools that I use. Some of them I can modify for my projects, provided I know the language they are written in. Since I'm a bit pedantic, this is literally everything I've used in the last year. I've sorted it into cohorts for convenience.</p>
+<p style=" text-align: center; border: 1px solid antiquewhite; width: 25%; padding: 5px;">CyberSec Stuff. Scanners mostly.</p>
 <div class="container">
   <a href="#" class="text-link">BurpSt</a>
   <a href="#" class="text-link">Nuclei</a>
   <a href="#" class="text-link">Nikto</a>
+  <a href="#" class="text-link">ZAP</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
   <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+</div>
+<p style=" text-align: center; border: 1px solid antiquewhite; width: 25%; padding: 5px; margin-top: 50px;">CyberSec Stuff. Scanners mostly.</p>
+<div class="container">
+  <a href="#" class="text-link">BurpSt</a>
+  <a href="#" class="text-link">Nuclei</a>
+  <a href="#" class="text-link">Nikto</a>
+  <a href="#" class="text-link">ZAP</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+  <a href="#" class="text-link">Link 1</a>
+  <a href="#" class="text-link">Link 2</a>
+  <a href="#" class="text-link">Link 3</a>
+</div>
+<p style=" text-align: center; border: 1px solid antiquewhite; width: 25%; padding: 5px; margin-top: 50px;">CyberSec Stuff. Scanners mostly.</p>
+<div class="container">
+  <a href="#" class="text-link">BurpSt</a>
+  <a href="#" class="text-link">Nuclei</a>
+  <a href="#" class="text-link">Nikto</a>
+  <a href="#" class="text-link">ZAP</a>
   <a href="#" class="text-link">Link 2</a>
   <a href="#" class="text-link">Link 3</a>
   <a href="#" class="text-link">Link 1</a>
@@ -273,10 +365,10 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.
   <a href="#" class="text-link">Link 3</a>
 </div>
 ---------------------------------------------------------------------------------------------------------------------------------------<br>
-[X] PROJECTS<br>
+<!-- [X] PROJECTS<br>
 <p style="margin: 0 auto; text-align: center; border: 1px solid antiquewhite; width: 50%; padding: 5px;">Projects of which I am proud and a brief description.</p>
 
----------------------------------------------------------------------------------------------------------------------------------------<br>
+---------------------------------------------------------------------------------------------------------------------------------------<br> -->
 [X] SOFT_SKILLS<br>
 <span class="my-p">&nbsp;&nbsp;├ Dozens of interviews conducted</span><br>
 <span class="my-p">&nbsp;&nbsp;├ Creation, support and enhancement of technical orientation teams</span><br>
@@ -323,7 +415,7 @@ Have a good day :*
 </pre>
 
 <div style="width: 250px; overflow: auto; padding: 10px; border: 1px solid antiquewhite; margin: 0 auto; ">
-» WEBSITE: &nbsp;&nbsp;<a href="https://akiralab.tech/" style="color: antiquewhite; text-decoration: none;">akiralab.tech</a><br>
+» WEBSITE: &nbsp;&nbsp;<a href="https://zeroday.moscow/" style="color: antiquewhite; text-decoration: none;">zeroday.moscow</a><br>
 ----------------- <br>
 » MAIL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:akirahack@tuta.io?subject=&body=hello%20friend!" style="color: antiquewhite; text-decoration: none;">akirahack@tuta.io</a><br>
 ----------------- <br>
