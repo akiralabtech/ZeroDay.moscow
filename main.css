@@ -191,21 +191,6 @@ body {
     color: #0a0a0a;
 }
 
-.projects1{
+.projectsClear{
     color: #535353;
-}
-
-
-.popup {
-    position: absolute; /* Позиционирование относительно окна */
-    transition: opacity 0.1s ease; /* Плавный переход для появления */
-    opacity: 0; /* Начальная прозрачность */
-    pointer-events: none; /* Игнорируем события мыши, когда окно скрыто */
-    z-index: 1000; /* Убедитесь, что окно находится поверх других элементов */
-    background-color: #0a0a0a;
-}
-
-.show {
-    opacity: 1; /* Полная непрозрачность при показе */
-    pointer-events: auto; /* Включаем события мыши, когда окно показано */
 }

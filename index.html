@@ -21,6 +21,25 @@
           clock.innerHTML = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }, 1000);
     </script>
+    <script> 
+      function runningline(msg,ctrlwidth)
+      {
+      msg = " "+msg
+      newmsg = msg
+      while (newmsg.length < ctrlwidth) {newmsg += msg}
+      document.write ('<form name="Tekst">')
+      document.write ('<input name="tekst" style="border:0;font-family:DotGothic16, sans-serif; font-size:20px;color:antiquewhite;background-color:#0a0a0a;width:100%;user-select:none;pointer-events: none;" value= "'+newmsg+'" size= '+ctrlwidth+' />')
+      document.write ('</form>')
+      prokrutka()
+      }
+      function prokrutka()
+      {
+      NowMsg=document.Tekst.tekst.value
+      NowMsg=NowMsg.substring(1,NowMsg.length)+NowMsg.substring(0,1)
+      document.Tekst.tekst.value = NowMsg
+      bannerid=setTimeout("prokrutka()",200)
+      }
+    </script>
 </head>
 
 <pre id="PROLOGUE" class="headerPreMax"></pre>
@@ -48,6 +67,8 @@
 </nav>
 
 <body>
+<p style="padding-top: 8px; text-align: center;"><script>runningline("ハッカー エンジニア デベロッパー",200)</script></p>
+
 <pre class="pc" style="text-align: center; margin-top: 40px;">
 ╔═══╦═══════════════════════╦═══╦════════════════════════════════════════╦══════╗
 ║░░░║        PROLOGUE       ║ + ║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║ 0x00 ║
@@ -188,13 +209,9 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.</
 <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
 [X] SELECTED_PROJECTS<br><br>
 <div class="ascii" style="line-height: 10px; letter-spacing: 4px; font-size: 14px;  top: 0; right: 0;  border: 1px solid antiquewhite; width: 352px; float: right;"></div>
-<div class="projects">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVITO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024-2025</div>
-<div class="popup" style="display: none;">
-  <div style="width: 500px; overflow: auto; padding: 10px; border: 1px solid antiquewhite;">
-      Здесь вы можете добавить информацию о проекте AVITO, его особенностях и сроках.
-  </div>
-</div>
-<div class="projects1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVITO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024-2025</div>
+<div class="projects">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IT_HUB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024-2025</div>
+<div class="projects">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sdvolkmsolkmsdv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024-2025</div>
+<div class="projectsClear">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVITO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024-2025</div>
 <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
 [X] SOFT_SKILLS<br>
 <span class="my-p">&nbsp;&nbsp;├ Dozens of interviews conducted</span><br>
@@ -219,13 +236,13 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.</
 
 <div class="pc" style="width: 1080px; overflow: auto; padding: 10px; border: 1px solid antiquewhite; margin: 0 auto; ">
 Hope, I've given you all the information you need to know about me. Even if it is a bit superficial. I have always been and will always be a cyber security engineer. It is an integral part of my life and personality.<br><br>
-At the moment I am not looking for a job as I am satisfied with my current one. Anyway, I am always open to dialog, suggestions and will be just happy to talk about things in my sphere. And also to advise and help as needed.<br><br>
+At the moment I am not looking for a job as I am happy with my current one. Anyways, I am always open to dialog, suggestions and will be just happy to talk about things in my sphere. And also to advise and help as needed.<br><br>
 Have a good day :*
 </div>
 
 <div class="phone" style="width: 90%; overflow: auto; padding: 10px; border: 1px solid antiquewhite; margin: 0 auto; ">
 Hope, I've given you all the information you need to know about me. Even if it is a bit superficial. I have always been and will always be a cyber security engineer. It is an integral part of my life and personality.<br><br>
-At the moment I am not looking for a job as I am satisfied with my current one. Anyway, I am always open to dialog, suggestions and will be just happy to talk about things in my sphere. And also to advise and help as needed.<br><br>
+At the moment I am not looking for a job as I am happy with my current one. Anyways, I am always open to dialog, suggestions and will be just happy to talk about things in my sphere. And also to advise and help as needed.<br><br>
 Have a good day :*
 </div>
 
