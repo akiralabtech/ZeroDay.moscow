@@ -176,6 +176,10 @@ body {
     color: #0a0a0a;
 }
 
+.projects{
+    width: 725px;
+}
+
 .projects a{
     color: antiquewhite;
     text-decoration: none;
