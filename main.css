@@ -2,37 +2,54 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 :root {
     font-family: "DotGothic16", sans-serif;
-    background-color: #010101;
+    background-color: #0a0a0a;
     color: antiquewhite;
+    --grad: linear-gradient(currentColor 0 0);
+    --thik: 1px;
+    --size: 10px;
 }
-
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #010101;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: opacity 1s;
+body {
+    cursor: default;
 }
-#loading-video {
-  width: 100px; /* reduced width */
-  height: 100px; /* reduced height */
+* {
+    cursor: default;
 }
-
-
-#loading-screen {
-  transition: opacity 1s;
+a, button, .projects, .cornerEffect {
+    cursor: pointer;
 }
+  .cornerEffect { 
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    width: 120px;
+    background: none;
+    border: none;
+    position: relative;
+    color: antiquewhite;
+    font-family: "DotGothic16", sans-serif;
+    &::after {
+      content: "";
+      background: var(--grad) top left / var(--thik) var(--size),
+        var(--grad) top left / var(--size) var(--thik),
+        var(--grad) top right / var(--size) var(--thik),
+        var(--grad) top right / var(--thik) var(--size),
+        var(--grad) bottom left / var(--thik) var(--size),
+        var(--grad) bottom left / var(--size) var(--thik),
+        var(--grad) bottom right / var(--size) var(--thik),
+        var(--grad) bottom right / var(--thik) var(--size);
+      background-repeat: no-repeat;
+      inset: 0;
+      position: absolute;
+    }
+  }
 
-#loading-screen.fade-out {
-  opacity: 0;
-  pointer-events: none;
-}  
+.cornerEffect:hover {
+    background-color:  antiquewhite;
+    color: #0a0a0a;
+}
+.cornerEffect:hover::after {
+    background: none;
+  }
 
 
 .activity {
@@ -75,14 +92,14 @@
 /* You can also include other vendor prefixes as needed */
 ::selection {
     background-color: #fa4c14;
-    color: #010101;
+    color: #0a0a0a;
 }
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #010101;
+    background-color: #0a0a0a;
     padding: 5px;
     display: flex;
     justify-content: space-between;
@@ -139,49 +156,13 @@ body {
 
 .my-p:hover {
     background-color: #fa4c14;
-    color: black;
+    color: #0a0a0a;
 }
 .my-p::selection {
-    background-color: #010101;
+    background-color: #0a0a0a;
     color: #fa4c14;
 }
-.section--intro {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 85vh;
-}
-.section--intro .city {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-:root {
-    --h1: 3rem;
-}
-h1,
-.h1 {
-    font-family: "VT323", monospace;
-    font-size: var(--h1);
-    font-weight: 400;
-    line-height: 0.85em;
-    text-transform: uppercase;
-}
-.section--intro h1 {
-    pointer-events: none;
-    position: absolute;
-    text-align: center;
-    margin-bottom: 0;
-}
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 118px);
-    grid-gap: 19px;
-    margin-top: 20px;
-}
+
 .text-link {
     padding: 10px;
     text-align: center;
@@ -191,5 +172,35 @@ h1,
 }
 .text-link:hover {
     background-color: #fa4c14;
-    color: #010101;
+    color: #0a0a0a;
+}
+
+.projects a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+
+.projects:hover {
+    background-color: #fa4c14;
+    color: #0a0a0a;
+}
+
+.projects1{
+    color: #535353;
+}
+
+
+.popup {
+    position: absolute; /* Позиционирование относительно окна */
+    transition: opacity 0.3s ease; /* Плавный переход для появления */
+    opacity: 0; /* Начальная прозрачность */
+    pointer-events: none; /* Игнорируем события мыши, когда окно скрыто */
+    z-index: 1000; /* Убедитесь, что окно находится поверх других элементов */
+    background-color: #0a0a0a;
+}
+
+.show {
+    opacity: 1; /* Полная непрозрачность при показе */
+    pointer-events: auto; /* Включаем события мыши, когда окно показано */
 }
