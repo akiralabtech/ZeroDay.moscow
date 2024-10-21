@@ -8,6 +8,7 @@
     --thik: 1px;
     --size: 10px;
 }
+
 body {
     cursor: default;
 }
@@ -193,7 +194,7 @@ body {
 
 .popup {
     position: absolute; /* Позиционирование относительно окна */
-    transition: opacity 0.3s ease; /* Плавный переход для появления */
+    transition: opacity 0.1s ease; /* Плавный переход для появления */
     opacity: 0; /* Начальная прозрачность */
     pointer-events: none; /* Игнорируем события мыши, когда окно скрыто */
     z-index: 1000; /* Убедитесь, что окно находится поверх других элементов */
