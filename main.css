@@ -132,30 +132,6 @@ html {
 body {
     -ms-overflow-style: none;
 }
-.phone {
-    display: none;
-}
-@media (max-width: 999px) {
-    .pc {
-        display: none;
-    }
-    .phone {
-        display: block;
-    }
-    .navbar {
-        display: none;
-    }
-}
-@media (max-width: 960px) {
-    .headerPreMax {
-        display: none;
-    }
-}
-@media (min-width: 961px) {
-    .headerPreMin {
-        display: none;
-    }
-}
 
 .my-p:hover {
     background-color: #fa4c14;
@@ -180,6 +156,7 @@ body {
 
 .projects{
     width: 725px;
+    cursor: default;
 }
 
 .projects a{
@@ -191,6 +168,16 @@ body {
 .projects:hover {
     background-color: #fa4c14;
     color: #0a0a0a;
+}
+
+.projects::selection {
+    background-color: #0a0a0a;
+    color: #fa4c14;
+}
+
+.projectsClear::selection {
+    background-color: #0a0a0a;
+    color: #fa4c14;
 }
 
 .projectsClear{
