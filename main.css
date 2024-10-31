@@ -155,7 +155,6 @@ body {
 }
 
 .projects{
-    width: 725px;
     cursor: default;
 }
 
@@ -182,4 +181,16 @@ body {
 
 .projectsClear{
     color: #535353;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: auto; /* Неограниченная высота */
+    border: 1px solid #ccc; /* Для визуализации границ */
+}
+.left, .right {
+    flex: 1; /* Одинаковая ширина */
+    padding: 20px; /* Отступы внутри блока */
+    box-sizing: border-box; /* Учитывать отступы в ширине */
 }
