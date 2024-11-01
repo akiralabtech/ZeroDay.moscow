@@ -24,7 +24,7 @@ a, button, .projects, .cornerEffect {
     display: grid;
     place-items: center;
     font-size: 20px;
-    width: 120px;
+    width: 160px;
     background: none;
     border: none;
     position: relative;
@@ -187,10 +187,9 @@ body {
     display: flex;
     width: 100%;
     height: auto; /* Неограниченная высота */
-    border: 1px solid #ccc; /* Для визуализации границ */
 }
 .left, .right {
     flex: 1; /* Одинаковая ширина */
-    padding: 20px; /* Отступы внутри блока */
+    padding: 10px; /* Отступы внутри блока */
     box-sizing: border-box; /* Учитывать отступы в ширине */
 }
