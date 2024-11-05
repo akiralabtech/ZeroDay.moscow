@@ -206,6 +206,7 @@ body {
     position: relative;
     color: #535353;
     font-family: "DotGothic16", sans-serif;
+    margin-top: 16px;
     &::after {
       content: "";
       background: var(--grad) top left / var(--thik) var(--size),
