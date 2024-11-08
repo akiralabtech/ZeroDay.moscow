@@ -243,5 +243,6 @@ body {
     box-sizing: border-box; /* Учитываем отступы в ширине блока */
     padding: 10px; /* Внутренние отступы */
     border: 1px solid #696969; /* Рамка блока */
+    border-radius: 2px;
     font-size: 18px;
 }
