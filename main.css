@@ -223,13 +223,6 @@ body {
     }
   }
 
-
-
-
-
-
-
-
 .container1 {
     width: 95%; /* Контейнер занимает 90% ширины экрана */
     margin: 10px auto; /* Центрируем контейнер и добавляем отступы сверху и снизу */
@@ -240,6 +233,15 @@ body {
 
 .text-block {
     flex: 1 1 calc(50% - 10px); /* Блоки занимают 50% ширины с учетом отступов */
+    box-sizing: border-box; /* Учитываем отступы в ширине блока */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #696969; /* Рамка блока */
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.text-block1 {
+    width: 508px;
     box-sizing: border-box; /* Учитываем отступы в ширине блока */
     padding: 10px; /* Внутренние отступы */
     border: 1px solid #696969; /* Рамка блока */
