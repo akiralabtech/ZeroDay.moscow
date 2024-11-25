@@ -161,6 +161,10 @@ body {
     -ms-overflow-style: none;
 }
 
+.my-p{
+    font-size: 18px;
+}
+
 .my-p:hover {
     background-color: #fa4c14;
     color: #0a0a0a;
@@ -216,7 +220,8 @@ body {
 }
 
 .projectsClear{
-    color: #696969;
+    color: antiquewhite;
+    font-size: 16px;
 }
 
 .container {
