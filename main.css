@@ -14,6 +14,34 @@
 body {
     cursor: default;
 }
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 1s;
+}
+#loading-video {
+  width: 100px; /* reduced width */
+  height: 100px; /* reduced height */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#loading-screen {
+  transition: opacity 1s;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
 * {
     cursor: default;
 }
@@ -159,6 +187,12 @@ body {
     font-family: "DotGothic16", sans-serif;
     font-size: 18px;
 }
+.projects1{
+    cursor: default;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 18px;
+}
+
 
 .projects a{
     color: antiquewhite;

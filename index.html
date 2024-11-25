@@ -7,62 +7,102 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <title>RESUME</title>
-    <link rel="icon" type="image/png" sizes="192x192"  href="IMG/icon_192.png">
-    <link rel="icon" type="image/png" sizes="32x32"    href="IMG/icon_32.png">
-    <link rel="stylesheet" type="text/css"             href="main.css"/>
-    <script>  
+    <link rel="icon" type="image/png" sizes="192x192" href="IMG/icon_192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/icon_32.png">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <script>
         setInterval(function () {
-          var now = new Date();
-          var hours = now.getHours();
-          var minutes = now.getMinutes();
-          var seconds = now.getSeconds();
-          var clock = document.getElementById("clock");
-          clock.innerHTML = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var clock = document.getElementById("clock");
+            clock.innerHTML = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }, 1000);
     </script>
-    <script> 
-      function runningline(msg,ctrlwidth)
-      {
-      msg = " "+msg
-      newmsg = msg
-      while (newmsg.length < ctrlwidth) {newmsg += msg}
-      document.write ('<form name="Tekst">')
-      document.write ('<input name="tekst" style="border:0;font-family:DotGothic16, sans-serif; font-size:20px;color:antiquewhite;background-color:#0a0a0a;width:100%;user-select:none;pointer-events: none;" value= "'+newmsg+'" size= '+ctrlwidth+' />')
-      document.write ('</form>')
-      prokrutka()
-      }
-      function prokrutka()
-      {
-      NowMsg=document.Tekst.tekst.value
-      NowMsg=NowMsg.substring(1,NowMsg.length)+NowMsg.substring(0,1)
-      document.Tekst.tekst.value = NowMsg
-      bannerid=setTimeout("prokrutka()",200)
-      }
+    <script>
+        function runningline(msg, ctrlwidth) {
+            msg = " " + msg;
+            newmsg = msg;
+            while (newmsg.length < ctrlwidth) {
+                newmsg += msg;
+            }
+            document.write('<form name="Tekst">');
+            document.write('<input name="tekst" style="border:0;font-family:DotGothic16, sans-serif; font-size:20px;color:antiquewhite;background-color:#0a0a0a;width:100%;user-select:none;pointer-events: none;" value="' + newmsg + '" size=' + ctrlwidth + ' />');
+            document.write('</form>');
+            prokrutka();
+        }
+
+        function prokrutka() {
+            NowMsg = document.Tekst.tekst.value;
+            NowMsg = NowMsg.substring(1, NowMsg.length) + NowMsg.substring(0, 1);
+            document.Tekst.tekst.value = NowMsg;
+            bannerid = setTimeout("prokrutka()", 200);
+        }
+    </script>
+    <script>
+        function createRunningLine(message, controlWidth) {
+            message = " " + message;
+            newMessage = message;
+            while (newMessage.length < controlWidth) {
+                newMessage += message;
+            }
+            document.write('<form name="TextForm">');
+            document.write('<input name="textInput" style="border:0;font-family:DotGothic16, sans-serif; font-size:30px;color:antiquewhite;background-color:#0a0a0a;width:100%;user-select:none;pointer-events: none;" value="' + newMessage + '" size=' + controlWidth + ' />');
+            document.write('</form>');
+            scrollText();
+        }
+
+        function scrollText() {
+            currentMessage = document.TextForm.textInput.value;
+            currentMessage = currentMessage.substring(1, currentMessage.length) + currentMessage.substring(0, 1);
+            document.TextForm.textInput.value = currentMessage;
+            bannerId = setTimeout("scrollText()", 200);
+        }
     </script>
 </head>
 
-<pre id="PROLOGUE" class="headerPreMax"></pre>
-
-<nav class="navbar">
-    <ul class="navbar-nav">
-      <div class="activity spinning">|</div>
-      <div id="scroll-indicator">
-        <span id="scroll-indicator-bars">--------------------</span>
-      </div>
-      <span id="scroll-progress" style="font-size: large;">000</span>
-      <a href="#PROLOGUE" style="color: antiquewhite; text-decoration: none; font-size: large; margin-left: 50px;">PROLOGUE</a>
-      <a href="#HARD_SKILLS" style="color: antiquewhite; text-decoration: none; font-size: large; margin-left: 50px;">SKILLS</a>
-      <a href="#LINKS" style="color: antiquewhite; text-decoration: none; font-size: large; margin-left: 50px;">LINKS</a>
-    </ul>
-    <span id="clock" style="color: antiquewhite; font-size: large; margin-right: 20px;"></span>
-</nav>
-
 <body>
+    <pre id="PROLOGUE" class="headerPreMax"></pre>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <div class="activity spinning">|</div>
+            <div id="scroll-indicator">
+                <span id="scroll-indicator-bars">--------------------</span>
+            </div>
+            <span id="scroll-progress" style="font-size: large;">000</span>
+            <a href="#PROLOGUE" style="color: antiquewhite; text-decoration: none; font-size: large; margin-left: 50px;">PROLOGUE</a>
+            <a href="#HARD_SKILLS" style="color: antiquewhite; text-decoration: none; font-size: large; margin-left: 50px;">SKILLS</a>
+            <a href="#LINKS" style="color: antiquewhite; text-decoration: none; font-size: large; margin-left: 50px;">INFO</a>
+        </ul>
+        <span id="clock" style="color: antiquewhite; font-size: large; margin-right: 20px;"></span>
+    </nav>
+
+<div id="loading-screen">
+    <video id="loading-video" autoplay muted playsinline>
+      <source src="./IMG/oswald_gif.mp4" type="video/mp4">
+    </video>
+</div>
+  <script>
+  const loadingScreen = document.getElementById('loading-screen');
+const loadingVideo = document.getElementById('loading-video');
+
+loadingVideo.addEventListener('ended', () => {
+  loadingScreen.classList.add('fade-out');
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 1000);
+});
+  </script>
+
+
+
+
 
 <p style="padding-top: 8px; text-align: center;"><script>runningline("ハッカー エンジニア デベロッパー",200)</script></p>
 
 <div class="greeting" style="font-size: 20px;">
-  <p class="greeting_hlwrld" style="text-align: center;">&lt------HACK_AND_PROTECT_FROM------&gt</p>
+  <p class="greeting_hlwrld" style="text-align: center;	font-family: 'VT323', monospace; font-size: 30px;">&lt------HACK_AND_PROTECT_FROM------&gt</p>
   <p class="greeting_hlwrld" style="text-align: center; font-family: 'Jersey 15', sans-serif; font-size: 30px;">DAY ONE</p>
 </div>
 
@@ -73,37 +113,22 @@
 </pre>
 
 
-<div style="width: 830px; overflow: auto; padding: 10px; border: 1px solid antiquewhite; border-radius: 1px; margin: 0 auto;">
-This page was created mainly for HR managers, recruiters and people who are interested in me as a specialist. It contains all the basic information that will allow you to make a decision on your readiness to cooperate further. However, it should be noted that I did not specify a lot of personal information that can harm me in one way or another, such as my name, age, some work projects under NDA. I hope you will take it with understanding.<br>
+<div style="width: 830px; overflow: auto; padding: 10px; margin: 0 auto; font-size: 20px;">
+This website was created for recruiters, journalists, and people who are interested in me as a specialist. It contains all the basic information that will allow you to make a decision on your readiness to cooperate further. However, it should be noted that I did not specify a lot of personal information that can harm me in one way or another, such as my name, age, some work projects under NDA.<br>Hope you will take it with understanding.<br>
 <p style="float: right;">Regards AKIRA.</p> 
 </div>
 
 
-
-<pre style="text-align: center; margin-top: 40px;">
+<pre id="HARD_SKILLS" style="text-align: center; margin-top: 140px;">
 ╔═══╦═══════════════════════╦═══╦════════════════════════════════════════╦══════╗
-║░░░║        ABOUT_ME       ║ + ║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║ 0x01 ║
-╚═══╩═══════════════════════╩═══╩════════════════════════════════════════╩══════╝
-</pre>
-
-
-<div style="width: 1080px; overflow: auto; padding: 10px; border: 1px solid antiquewhite;  border-radius: 2px; margin: 0 auto; font-size: 18px;">
-In the beginning I had to work on outsourcing, mostly in cybersecurity sphere and sometimes in development.<br><br>
-Then I got an official job as a developer and realized that I was interested in more global issues.<br><br>
-Subsequently, after graduating from university, working on several significant personal projects in the European and Eastern labor markets, as well as the creation of teams, hubs, and a bunch of successful contracts, and deciding to start my career in my home country, I became a pentester.<br>A dream job and a solid team provided me with the opportunity to create exciting products, not only related to hacking. After I transitioned to DevSecOps, my team (along with me) joined the first telecom company in the country. Now, in my role as Chief Engineer, I build cybersecurity software products that help make the world a safer place!<br><br>
-In general, I have more work experience than I described in my resume. I hope you can guess why. (No, I didn't do anything immoral, etc.)
-</div>
-
-<pre id="HARD_SKILLS" style="text-align: center; margin-top: 40px;">
-╔═══╦═══════════════════════╦═══╦════════════════════════════════════════╦══════╗
-║░░░║         SKILLS        ║ + ║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║ 0x02 ║
+║░░░║         SKILLS        ║ + ║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║ 0x01 ║
 ╚═══╩═══════════════════════╩═══╩════════════════════════════════════════╩══════╝
 </pre>
 
 <div style="width: 1080px; overflow: auto; padding: 10px; border: 1px solid antiquewhite; margin: 0 auto;">
 <div class="ascii" style="line-height: 10px; letter-spacing: 4px; font-size: 14px;  top: 0; right: 0;  border: 1px solid antiquewhite;  border-radius: 2px; width: 352px; float: right;"></div>
 
-<span style="background-color: #fa4c14; color: #0a0a0a; font-size: 20px;">[[X] LANGUAGES&nbsp;</span><br><br>
+<span style="background-color: #fa4c14; color: #0a0a0a; font-size: 20px;">[X] LANGUAGES&nbsp;</span><br><br>
 <span class="my-p">&nbsp;&nbsp;├ C#_________J-[**---]__in progress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
 <span class="my-p">&nbsp;&nbsp;├ GO_________J-[*----]__don't use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
 <span class="my-p">&nbsp;&nbsp;├ JS_________M-[***--]__not bad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
@@ -134,10 +159,10 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.
 <span style="background-color: #fa4c14; color: #0a0a0a; font-size: 20px;">[X] SELECTED_HARD_SKILLS_AND_ACHIVEMENTS&nbsp;</span><br><br>
 <div>
     <div>
-        <button class="cornerEffect" style="cursor: default;">ACHIVEMENTS</button><br>
+        <!-- <button class="cornerEffect" style="cursor: default;">ACHIVEMENTS</button><br> -->
         <pre style="font-size: 18px;">
  +------+-------------------------------------------------------------------------------+---------+
- <span class="projects">| ID    |     NAME                                                                                      |           |</span>
+ <span class="projects1">| ID    |     NAME                                                                                      |           |</span>
  +------+-------------------------------------------------------------------------------+---------+
  <span class="projects">| 01    |   ┌ IT_HUB                                                                                   |           |</span>
  <span class="projects">| 02    |   ├ AUTOPENTEST_SCANNER                                                                      |           |</span>
@@ -148,7 +173,7 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.
  <span class="projects">| 07    |   └ GOT_MARRIED,_BUILT_A_HOUSE,_PLANTED_A_TREE                                               | PRISELESS |</span>
  +------+-------------------------------------------------------------------------------+---------+</pre>
 </div>
-<button class="cornerEffect" style="cursor: default; margin-top: 40px;">SKILLS</button><br>
+<!-- <button class="cornerEffect" style="cursor: default; margin-top: 40px;">SKILLS</button><br> -->
 <span style="color: antiquewhite; font-size: 18px;">[+]------------------------------------------- skills I rely on as an engineer -------------------------------------[+]</span><br>
 <div class="container">
     <div class="left">
@@ -256,33 +281,73 @@ But my favorite languages are C++ and JS. I also sometimes have to use python.
 
 </div>
 </div>
+
+
 <pre style="text-align: center; margin-top: 40px;">
 ╔═══╦═══════════════════════╦═══╦════════════════════════════════════════╦══════╗
-║░░░║        EPILOGUE       ║ + ║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║ 0x03 ║
+║░░░║          INFO         ║ + ║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║ 0x02 ║
 ╚═══╩═══════════════════════╩═══╩════════════════════════════════════════╩══════╝
 </pre>
 
 <div style="width: 1080px; overflow: auto; padding: 10px; border: 1px solid antiquewhite; margin: 0 auto; font-size: 18px; border-radius: 2px;">
-Hope, I've given you all the information you need to know about me. Even if it is a bit superficial. I have always been and will always be a cyber security engineer. It is an integral part of my life and personality.<br><br>
-At the moment I am not looking for a job as I am happy with my current one. Anyways, I am always open to dialog, suggestions and will be just happy to talk about things in my sphere. And also to advise and help as needed.<br><br>
-Have a good day :*
+<p style="text-align: center;"><script>createRunningLine("ハッカー エンジニア デベロッパー", 200)</script></p>
+<pre style="font-size: small; margin-right: 40px; color: #585858; float: right;">
+        8
+        8
+        8
+       888
+       888  
+      88888
+     8888888
+    888888888
+88888888888888888
+   88888888888
+    888888888
+     8888888
+      88888
+      88888
+       888
+       888
+        8
+        8
+        8</pre>
+<p style="font-size: 20px;">Hope that I was able to fully describe my knowledge and skills. In any case, you can always ask me to elaborate on any point, and I'll be happy to do so.</p>
+<p style="font-size: 20px;">Have a good day :*</p>
+<p style="font-size: 20px;">Have a good day :*</p>
+<p style="font-size: 20px;">Have a good day :*</p>
+<p style="font-size: 20px;">Have a good day :*</p>
+<p style="font-size: 20px;">Have a good day :*</p>
 </div>
 
+<p id="textToCopy" style="display: none;">Это текст, который будет скопирован.</p>
 
-<div id="myDiv" style="text-align: center; font-size: 20px; height: 50px; margin-top: 15px;"></div>
-
-<footer id="LINKS" style="display: flex; justify-content: space-between; padding: 10px; color: antiquewhite;">
+<footer id="LINKS" style="margin: 0 auto; width: 1000px; display: flex; justify-content: space-between; padding: 10px; color: antiquewhite; margin-bottom: 40px; margin-top: 40px; font-size: 24px;">
     <div style="flex: 1; text-align: left;">
-        <a style="color: antiquewhite; text-decoration: none;">zeroday.moscow</a>
+        <button id="copyButton" style="background: none; border: none; color: antiquewhite; font-size: 24px; font-family: DotGothic16, sans-serif;">SIMPLEX</button>
     </div>
     <div style="flex: 1; text-align: center;">
         <a href="mailto:akirahack@tuta.io?subject=&body=hello%20friend!" style="color: antiquewhite; text-decoration: none;">akirahack@tuta.io</a>
     </div>
     <div style="flex: 1; text-align: right;">
-        <a href="https://t.me/-" style="color: antiquewhite; text-decoration: none;">@-</a>
+        <a href="https://t.me/-" style="color: antiquewhite; text-decoration: none;">MATRIX</a>
     </div>
 </footer>
 
+<div id="myDiv" style="text-align: center; font-size: 20px; height: 50px; margin-top: 15px;"></div>
+
+
+<script>
+    document.getElementById('copyButton').onclick = function() {
+        const text = document.getElementById('textToCopy').innerText;
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('account ID copied to clipboard');
+    };
+</script>
 <script>
   const chars = "×#-_¯—0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
 var Glitch = function(t, i, e, n, h, r) {
