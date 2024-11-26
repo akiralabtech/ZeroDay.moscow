@@ -37,34 +37,28 @@
             NowMsg = document.Tekst.tekst.value;
             NowMsg = NowMsg.substring(1, NowMsg.length) + NowMsg.substring(0, 1);
             document.Tekst.tekst.value = NowMsg;
-            bannerid = setTimeout("prokrutka()", 200);
+            bannerid = setTimeout("prokrutka()", 2000);
         }
     </script>
     <script>
-    function createRunningLine(message) {
-        const controlWidth = window.innerWidth; // Получаем ширину окна
-        message = " " + message + " "; // Добавляем пробелы для эффекта
-        let newMessage = message;
-        
-        while (newMessage.length < controlWidth) {
-            newMessage += message; // Повторяем сообщение, чтобы оно заполнило ширину
+        function createRunningLine(message, controlWidth) {
+            message = " " + message;
+            newMessage = message;
+            while (newMessage.length < controlWidth) {
+                newMessage += message;
+            }
+            document.write('<form name="TextForm">');
+            document.write('<input name="textInput" style="border:0;font-family:DotGothic16, sans-serif; font-size:30px;color:antiquewhite;background-color:#0a0a0a;width:100%;user-select:none;pointer-events: none;" value="' + newMessage + '" size=' + controlWidth + ' />');
+            document.write('</form>');
+            scrollText();
         }
 
-        const input = document.createElement('input');
-        input.className = 'running-line';
-        input.setAttribute('readonly', true);
-        input.value = newMessage;
-        document.body.appendChild(input);
-        
-        scrollText(input);
-    }
-
-    function scrollText(input) {
-        let currentMessage = input.value;
-        currentMessage = currentMessage.substring(1) + currentMessage.charAt(0); // Сдвигаем строку
-        input.value = currentMessage;
-        setTimeout(() => scrollText(input), 200); // Запускаем снова
-    }
+        function scrollText() {
+            currentMessage = document.TextForm.textInput.value;
+            currentMessage = currentMessage.substring(1, currentMessage.length) + currentMessage.substring(0, 1);
+            document.TextForm.textInput.value = currentMessage;
+            bannerId = setTimeout("scrollText()", 200);
+        }
     </script>
 </head>
 
